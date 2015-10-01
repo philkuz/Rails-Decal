@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001012107) do
+ActiveRecord::Schema.define(version: 20151001033608) do
 
   create_table "cats", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "todos", force: true do |t|
+    t.string   "task"
+    t.boolean  "finished"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -23,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151001012107) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "age"
   end
 
 end
