@@ -1,0 +1,24 @@
+<h2>Users</h2>
+<% @users.each do |user| -%>
+    <p>
+        <%= user.name %> has run for <%=user.age %> years and won't stop. Here's his email:
+    </p>
+    <p>
+        <%= user.email %>
+    </p>
+<% end -%>
+<h2>Cats</h2>
+<% @cats.each do |cat| -%>
+    <p>
+        <%= cat.meow %>
+    </p>
+<% end -%>
+<h2>Todos</h2>
+<% @todos.each do |todo| -%>
+    <h4><%= todo.task %></h4>
+    <% if todo.finished %>
+        <p> Task finished! </p>
+    <% else %>
+        <p> Task not yet finished! </p>
+    <% end %>
+<% end -%>
