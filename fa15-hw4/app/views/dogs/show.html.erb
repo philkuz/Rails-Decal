@@ -1,0 +1,6 @@
+<%= link_to "Back", dogs_path %>
+<% if @failed %>
+    <h3>COULDN'T FIND DOG WITH THIS ID!!!!!</h3>
+<% else %>
+    <h3><%=@dog.name%> is <%=@dog.age%> years old!</h3>
+<% end %>

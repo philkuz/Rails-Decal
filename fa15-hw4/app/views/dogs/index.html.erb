@@ -1,0 +1,7 @@
+<h2>Do you like dogs? We do too!</h2>
+<h4>Here's a list of our dogs:</h4>
+<% @dogs.each do |d| %>
+    <%= link_to d.name, d%>
+<% end %>
+<h4>Want to create a new dog? Click the new</h4>
+<%= link_to "new", dogs_new_path %>

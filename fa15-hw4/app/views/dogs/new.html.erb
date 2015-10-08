@@ -1,0 +1,17 @@
+<%= link_to "Back", dogs_path %>
+<h3>Make a new Dog: </h3>
+<%= form_for @dog, url: {action: "create"} do |dag|%>
+    <%= dag.label "Name:"%>
+    <%= dag.text_field :name%>
+    <%= dag.label "Age:"%>
+    <%= dag.text_field :age%>
+    <%= dag.submit "Create Dog"%>
+<% end %>
+
+<!-- <%= form_tag("/dogs/create", method: "post") do %>
+    <%= label_tag(:name, "Dog's Name: ") %>
+    <%= text_field_tag(:name) %>
+    <%= label_tag(:age, "Dog's Age: ") %>
+    <%=  text_field_tag(:age) %>
+    <%= submit_tag("Create dog") %>
+<% end %> -->
