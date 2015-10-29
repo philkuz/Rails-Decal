@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :trainers
   patch '/capture/:id', to: 'pokemon#capture', as: 'capture'
   patch '/damage/:id', to: 'trainers#damage', as: 'damage'
+  resources :pokemon
 end

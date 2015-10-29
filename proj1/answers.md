@@ -8,6 +8,7 @@ The line captures the pokemon id stored within @pokemon and passes it as a url p
 # Question 3: What would you name your own Pokemon?
 Futurino
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
+I passed in the trainer_path variable with the pokemon's trainer_id as the parameter. This is because ruby grabs the default formatting for the url and then simply applies the id url to it. Alternatively I could have called 'trainer/:id' at that point.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 

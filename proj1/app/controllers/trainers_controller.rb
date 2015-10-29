@@ -7,6 +7,7 @@ class TrainersController < ApplicationController
 
   def show
     @trainer = Trainer.find(params[:id])
+    @user_is_trainer = (params[:id].to_i == current_trainer().id)
     @pokemons = @trainer.pokemons
   end
   def damage
