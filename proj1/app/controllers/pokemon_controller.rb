@@ -19,6 +19,7 @@ class PokemonController < ApplicationController
         if @pokemon.save
             redirect_to trainer_path(id: current_trainer().id)
         else
+            flash[:error] = @pokemon.errors.full_messages.to_sentence
             redirect_to new_pokemon_path
         end
     end
