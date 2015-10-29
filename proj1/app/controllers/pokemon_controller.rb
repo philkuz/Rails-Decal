@@ -3,7 +3,7 @@ class PokemonController < ApplicationController
         pokemon = Pokemon.find(params[:id])
         pokemon.trainer_id = current_trainer().id
         pokemon.save
-        redirect_to 'home#index'
+        redirect_to root_path
     end
     def new
         @pokemon = Pokemon.new

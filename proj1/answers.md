@@ -11,7 +11,8 @@ Futurino
 I passed in the trainer_path variable with the pokemon's trainer_id as the parameter. This is because ruby grabs the default formatting for the url and then simply applies the id url to it. Alternatively I could have called 'trainer/:id' at that point.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
-
+This line shows a notification at the top of the non-template view that tells the user that the pokemon name has already been taken.
 # Give us feedback on the project and decal below!
 
 # Extra credit: Link your Heroku deployed app
+http://afternoon-escarpment-8593.herokuapp.com/

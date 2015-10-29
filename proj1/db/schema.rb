@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151027024119) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "pokemons", force: :cascade do |t|
     t.string   "name"
     t.integer  "level"
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 20151027024119) do
     t.string   "name"
   end
 
-  add_index "trainers", ["email"], name: "index_trainers_on_email", unique: true
-  add_index "trainers", ["reset_password_token"], name: "index_trainers_on_reset_password_token", unique: true
+  add_index "trainers", ["email"], name: "index_trainers_on_email", unique: true, using: :btree
+  add_index "trainers", ["reset_password_token"], name: "index_trainers_on_reset_password_token", unique: true, using: :btree
 
 end
